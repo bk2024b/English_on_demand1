@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - English On Demand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Boutique English On Demand</h1>
+            <p class="text-xl md:text-2xl">Apprenez et vivez l'anglais au quotidien avec nos ebooks et accessoires !</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex space-x-4">
+                    <button class="px-4 py-2 rounded hover:bg-gray-100 transition-colors" data-category="all">
+                        Tous
+                    </button>
+                    <button class="px-4 py-2 rounded hover:bg-gray-100 transition-colors" data-category="ebook">
+                        Ebooks
+                    </button>
+                    <button class="px-4 py-2 rounded hover:bg-gray-100 transition-colors" data-category="tshirt">
+                        T-Shirts
+                    </button>
+                    <button class="px-4 py-2 rounded hover:bg-gray-100 transition-colors" data-category="casquette">
+                        Casquettes
+                    </button>
+                    <button class="px-4 py-2 rounded hover:bg-gray-100 transition-colors" data-category="notebook">
+                        Notebooks
+                    </button>
+                </div>
+                <button id="cartButton" class="relative p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span id="cartCount" 
+                          class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        0
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Produits -->
+    <section id="products" class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Ebook -->
+                <div class="product bg-white rounded-lg shadow-lg overflow-hidden" data-category="ebook">
+                    <img src="/api/placeholder/400/300" alt="English Mastery Ebook" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">English Mastery</h3>
+                        <p class="text-gray-600 mb-4">Guide complet pour maîtriser l'anglais</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-600">2 500 FCFA</span>
+                            <button onclick="addToCart('English Mastery', 2500)" 
+                                    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                                Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- T-Shirt -->
+                <div class="product bg-white rounded-lg shadow-lg overflow-hidden" data-category="tshirt">
+                    <img src="/api/placeholder/400/300" alt="T-Shirt English Lover" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">T-Shirt English Lover</h3>
+                        <p class="text-gray-600 mb-4">T-shirt 100% coton avec design exclusif</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-600">5 000 FCFA</span>
+                            <button onclick="addToCart('T-Shirt English Lover', 5000)" 
+                                    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                                Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autres produits à ajouter ici... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Panier -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-lg">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold">Votre Panier</h2>
+                    <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="cartItems" class="space-y-4 mb-6">
+                    <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+                </div>
+                <div class="border-t pt-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold">Total:</span>
+                        <span id="cartTotal" class="text-xl font-bold text-blue-600">0 FCFA</span>
+                    </div>
+                    <button onclick="checkout()" 
+                            class="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                        Payer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gestion du panier
+        let cart = [];
+        let cartVisible = false;
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            cartVisible = !cartVisible;
+            modal.classList.toggle('hidden');
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+            if (!cartVisible) {
+                toggleCart();
+            }
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            cartCount.textContent = cart.length;
+            cartItems.innerHTML = '';
+            
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItems.innerHTML += `
+                    <div class="flex justify-between items-center p-4 bg-gray-50 rounded">
+                        <div>
+                            <h4 class="font-bold">${item.name}</h4>
+                            <p class="text-gray-600">${item.price} FCFA</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+            });
+            
+            cartTotal.textContent = `${total} FCFA`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Votre panier est vide');
+                return;
+            }
+            alert('Redirection vers la page de paiement...');
+            // Ajouter ici la logique de paiement
+        }
+
+        // Filtrage des produits
+        document.querySelectorAll('[data-category]').forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                document.querySelectorAll('.product').forEach(product => {
+                    if (category === 'all' || product.getAttribute('data-category') === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Ouvrir/fermer le panier
+        document.getElementById('cartButton').addEventListener('click', toggleCart);
+    </script>
+</body>
+</html>
