@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English On Demand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">English On Demand</h1>
+            <p class="text-xl md:text-2xl mb-8">Pratiquez et progressez quand vous voulez, en toute simplicité.</p>
+            <img src="/api/placeholder/800/400" alt="Coaching en anglais" class="rounded-lg shadow-xl mx-auto">
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <button class="md:hidden p-4" id="menuButton">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-16 6h16"/>
+                    </svg>
+                </button>
+                <ul class="hidden md:flex space-x-6 py-4">
+                    <li><a href="#accueil" class="hover:text-blue-600 transition-colors">Accueil</a></li>
+                    <li><a href="#offres" class="hover:text-blue-600 transition-colors">Nos Offres</a></li>
+                    <li><a href="#blog" class="hover:text-blue-600 transition-colors">Blog</a></li>
+                    <li><a href="#faq" class="hover:text-blue-600 transition-colors">FAQ</a></li>
+                    <li><a href="#apropos" class="hover:text-blue-600 transition-colors">À propos</a></li>
+                    <li><a href="#coaches" class="hover:text-blue-600 transition-colors">Coaches</a></li>
+                    <li><a href="shop.html" class="hover:text-blue-600 transition-colors">Boutique</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobileMenu">
+                <ul class="py-4 space-y-2">
+                    <li><a href="#accueil" class="block py-2 hover:bg-gray-100 px-4 rounded">Accueil</a></li>
+                    <li><a href="#offres" class="block py-2 hover:bg-gray-100 px-4 rounded">Nos Offres</a></li>
+                    <li><a href="#blog" class="block py-2 hover:bg-gray-100 px-4 rounded">Blog</a></li>
+                    <li><a href="#faq" class="block py-2 hover:bg-gray-100 px-4 rounded">FAQ</a></li>
+                    <li><a href="#apropos" class="block py-2 hover:bg-gray-100 px-4 rounded">À propos</a></li>
+                    <li><a href="#coaches" class="block py-2 hover:bg-gray-100 px-4 rounded">Coaches</a></li>
+                    <li><a href="shop.html" class="block py-2 hover:bg-gray-100 px-4 rounded">Boutique</a></li>
+                    <li><a href="#contact" class="block py-2 hover:bg-gray-100 px-4 rounded">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction -->
+    <section id="introduction" class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Dans un monde globalisé, parler anglais avec assurance est un véritable atout, que ce soit pour booster votre carrière, préparer un entretien ou simplement communiquer au quotidien. Notre approche de coaching de pratique vous permet de réserver des sessions individuelles en ligne, d'une durée de 45 minutes, selon VOTRE emploi du temps. Chaque session est élaborée pour vous offrir un moment d'échange interactif, personnalisé et enrichissant.
+            </p>
+        </div>
+    </section>
+
+    <!-- Offres -->
+    <section id="offres" class="py-16 bg-white px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Offres Par Session</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starter Talk -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">Starter Talk – 1000 FCFA</h3>
+                    <p class="text-gray-600 mb-6">Une session de pratique essentielle axée sur la conversation en anglais pour ceux qui souhaitent améliorer leur aisance orale à moindre coût.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Séance de 45 minutes
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Corrections en temps réel
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Flexibilité totale
+                        </li>
+                    </ul>
+                    <div class="space-y-2">
+                        <a href="https://calendly.com/jonasboco86/english-on-demand" 
+                           class="block text-center py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                            Réserver
+                        </a>
+                        <a href="https://link.feexpay.me/ZxLukc33/startertalk" 
+                           class="block text-center py-2 px-4 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+                            Payer
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fluency Boost -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">Fluency Boost – 2000 FCFA</h3>
+                    <p class="text-gray-600 mb-6">Une session enrichie avec retour détaillé et exercices interactifs pour accélérer votre progression.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Séance interactive de 45 minutes
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Feedback détaillé personnalisé
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Exercices interactifs
+                        </li>
+                    </ul>
+                    <div class="space-y-2">
+                        <a href="https://calendly.com/jonasboco86/english-on-demand" 
+                           class="block text-center py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                            Réserver
+                        </a>
+                        <a href="https://link.feexpay.me/PMZqCjF2/fluencyboost" 
+                           class="block text-center py-2 px-4 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+                            Payer
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Elite Talk -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Elite Talk – 5000 FCFA</h3>
+                    <p class="text-gray-600 mb-6">Une session de pratique haut de gamme avec suivi personnalisé et outils avancés.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Coaching intensif de 45 minutes
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Feedback oral et écrit
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Enregistrement de la session
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Plan d'action personnalisé
+                        </li>
+                    </ul>
+                    <div class="space-y-2">
+                        <a href="https://calendly.com/jonasboco86/english-on-demand" 
+                           class="block text-center py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                            Réserver
+                        </a>
+                        <a href="https://link.feexpay.me/JsGwYzwk/elitetalk" 
+                           class="block text-center py-2 px-4 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+                            Payer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Articles</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Article" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Comment améliorer son anglais rapidement ?</h3>
+                        <p class="text-gray-600 mb-4">Découvrez des astuces pratiques pour progresser en anglais.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800">Lire la suite →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Article" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Pourquoi pratiquer avec un coach ?</h3
+                        <p class="text-gray-600 mb-4">Les avantages d'un coaching personnalisé pour apprendre l'anglais.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800">Lire la suite →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test de niveau -->
+    <section id="test-niveau" class="py-16 bg-blue-50 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Évaluez votre niveau d'anglais</h2>
+            <p class="text-lg text-gray-700 mb-8">Testez gratuitement votre niveau d'anglais avec EFSET, un test reconnu internationalement.</p>
+            <a href="https://www.efset.org/fr/" target="_blank" 
+               class="inline-block py-3 px-8 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Passer le test
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12">FAQ - Questions Fréquentes</h2>
+            <div class="space-y-4">
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="p-4 cursor-pointer hover:bg-gray-50">Comment réserver une session ?</summary>
+                    <div class="p-4 pt-0 text-gray-600">
+                        <p>Pour réserver une session, suivez ces étapes :</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Choisissez l'offre qui vous convient</li>
+                            <li>Effectuez votre paiement en cliquant sur "Payer"</li>
+                            <li>Après le paiement, cliquez sur "Réserver avec Calendly"</li>
+                            <li>Vous recevrez une confirmation avec le lien de connexion</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg shadow-md">
+                    <summary class="p-4 cursor-pointer hover:bg-gray-50">Comment se déroulent les sessions de coaching ?</summary>
+                    <div class="p-4 pt-0 text-gray-600">
+                        <p>Chaque session dure 45 minutes en ligne. Vous aurez un échange interactif avec un coach expérimenté qui vous guidera et corrigera vos erreurs en direct. Selon l'offre choisie, vous recevrez un feedback détaillé et des exercices personnalisés.</p>
+                    </div>
+                </details>
+
+                <!-- Autres questions FAQ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Ce que disent nos apprenants</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"Grâce à ce coaching, j'ai enfin réussi mon entretien en anglais !"</p>
+                    <p class="font-bold">- Amélie T.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"Un excellent programme qui m'a permis de parler avec confiance !"</p>
+                    <p class="font-bold">- Marc D.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"J'adore les sessions interactives, c'est super motivant !"</p>
+                    <p class="font-bold">- Claire L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">À propos</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="prose max-w-none">
+                    <p class="mb-6">Apprenez l'anglais autrement : pratique, flexibilité et résultats !</p>
+                    <p class="mb-6">Dans un monde où l'anglais est devenu indispensable, nous avons créé English On Demand pour vous offrir une approche pratique, efficace et adaptée à votre emploi du temps.</p>
+                    <h3 class="text-xl font-bold mb-4">Pourquoi choisir English On Demand ?</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Coaching personnalisé
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Flexibilité totale
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Pratique intensive
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches -->
+    <section id="coaches" class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Coaches</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Coach 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Jean Dupont</h3>
+                        <p class="text-gray-600 mb-4">Spécialiste de la conversation fluide et de l'anglais des affaires.</p>
+                        <button class="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                            Choisir
+                        </button>
+                    </div>
+                </div>
+                <!-- Répéter pour les autres coaches... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-4">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Contactez-nous</h2>
+            <form id="contactForm" class="space-y-6">
+                <div>
+                    <label for="nom" class="block text-gray-700 mb-2">Nom</label>
+                    <input type="text" id="nom" name="nom" required 
+                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" required 
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" 
+                        class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    Envoyer
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bouton Retour en Haut -->
+    <button id="backToTop" 
+            class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors hidden">
+        ↑
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 English On Demand. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.getElementById('menuButton').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Bouton retour en haut
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            // Ajouter la logique de soumission du formulaire ici
+            alert('Message envoyé avec succès !');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
